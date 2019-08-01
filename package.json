@@ -1,0 +1,24 @@
+{
+  "name": "post_auth_helper",
+  "version": "1.0.0",
+  "description": "Authorization server (pkce, clientID/clientSecret)",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "prestart": "npm run build",
+    "prebuild": "(tslint -c tslint.json -p tsconfig.json --fix) && ((rd dist /s /q) || (exit 0))",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "axios": "^0.18.0",
+    "dotenv": "^8.0.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.12.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  }
+}
